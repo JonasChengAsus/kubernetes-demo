@@ -27,3 +27,10 @@ curl http://localhost:30080
 kubectl delete services svc-webapp
 kubectl delete deployment deployment-webapp
 ```
+
+## Deploy Containers on Selected Nodes
+
+```shell
+kubectl label node docker-desktop node=master
+
+```

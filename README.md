@@ -32,5 +32,13 @@ kubectl delete deployment deployment-webapp
 
 ```shell
 kubectl label node docker-desktop node=master
-
+cat deployment-master-node.yaml
+kubectl create -f deployment-master-node.yaml
+cat deployment-other-node.yaml
+kubectl create -f deployment-other-node.yaml
+# there should be one pending pod
+kubectl get pods
+# remove resources
+kubectl delete deployment deployment-webapp-master
+kubectl delete deployment deployment-webapp-other
 ```

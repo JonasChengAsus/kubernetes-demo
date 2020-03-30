@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-webapp
+  name: deployment-webapp-other
   labels:
     deployment: deployment-webapp-label
 spec:
@@ -20,4 +20,4 @@ spec:
         ports:
         - containerPort: 80
       nodeSelector:
-        node: master
+        node: other
